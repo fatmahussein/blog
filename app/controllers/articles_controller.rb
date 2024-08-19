@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(title: "...", body: "...")
 
     if @article.save
-        redirect_to article_path
+        redirect_to @article
       else
         render :new, status: :unprocessable_entity
     end
